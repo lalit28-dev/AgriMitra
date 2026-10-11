@@ -1,3 +1,4 @@
+
 name: Deploy AgriMitra
 
 on:
@@ -35,6 +36,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Add SPA fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -46,3 +50,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
