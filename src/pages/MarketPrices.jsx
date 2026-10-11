@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Search, TrendingUp, CalendarDays } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/mandi";
+const API_URL = "https://agrimitra-api-9hld.onrender.com/api/mandi";
 
 function MarketPrices() {
   const [search, setSearch] = useState("");
